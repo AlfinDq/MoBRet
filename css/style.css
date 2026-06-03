@@ -1,0 +1,149 @@
+/*INI PENGATURAN WARNA DAN STYLE UMUM UNTUK SELURUH HALAMAN*/
+:root {
+    --kobi: #F0B2C7;
+    --white: #FFFFFF;
+    --chablis: #FFF0F0;
+    --vanilla-ice: #F0C7D8;
+    --gallery: #F0F0F0;
+
+    --text-dark: #3A2A2F;
+    --text-soft: #8F6F7A;
+
+    --shadow:
+        0 4px 12px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--chablis);
+    color:var(--text-dark);
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/*STYLING UNTUK NAVBAR*/
+.navbar{
+    height:80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+    background:rgba(255,255,255,0.7);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:var(--shadow);
+}
+
+/*STYLING UNTUK LOGO DI NAVBAR*/
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+
+    color:var(--kobi);
+}
+
+/*STYLING UNTUK TOMBOL DI NAVBAR*/
+.btn{
+    border:none;
+
+    padding:12px 24px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--kobi);
+    color:white;
+}
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+/*MOVIE CARD STYLE*/
+.movie-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+    cursor:pointer;
+}
+
+.movie-card:hover{
+    transform:translateY(-8px);
+}
+
+.movie-card img{
+    height:300px;
+    width:100%;
+    object-fit:cover;
+}
+
+/*MOVIE GRID STYLE*/
+.movie-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(220px,1fr));
+
+    gap:24px;
+}
+
+.hero{
+
+    min-height:450px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.25),
+        rgba(255,255,255,.25)
+    ),
+    url("../assets/banners/banner.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding:60px;
+}
